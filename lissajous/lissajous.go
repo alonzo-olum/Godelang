@@ -19,14 +19,14 @@ const (
 
 func lissajous(out io.Writer) {
 	const (
-		cycles = 5
-		res = 0.001
-		size = 100
-		nframes = 64
-		delay = 8
+		cycles = 5	// number of complete x oscillator revs
+		res = 0.001	// angular resolution
+		size = 100	// image canvas covers[-size..+size]
+		nframes = 64	// animation frames
+		delay = 8	// delay between frames
 	)
 
-	freq := rand.Float64() * 3.0
+	freq := rand.Float64() * 3.0	// relative frequency of y-oscillator
 	anim := gif.GIF{LoopCount: nframes}
 	phase := 0.0
 	for i := 0; i < nframes; i++ {
