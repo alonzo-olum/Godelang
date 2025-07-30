@@ -15,8 +15,12 @@ We want roughly five cycles required to complete a resolution.
 
 ## Running
 
-Simply `go build lissajous`. Then write output to a sample .gif file like one available in same directory.
+Simply `go build main.go lissajous.go`. Then write output to a sample .gif file like one available in same directory.
+ Running the main script in the directory starts a web service at `port :3000` on the localhost.
+A request is submitted as `http://127.0.0.1:3000?cycles=7`.
 
 ## Write GIfs to output file
 
-    `./lissajous >out.gif`
+    `./main >out.gif`
+
+### NB: Run the main file as above otherwise the screen will be used as stdout if you do not provide a .gif file.
